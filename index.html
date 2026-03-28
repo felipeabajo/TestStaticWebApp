@@ -5,5 +5,19 @@
   </head>
   <body>
     <h1>Hello World 🚀</h1>
+    <button onclick="cargarImagen()">Ver imagen satelital</button>
+<br><br>
+<img id="img" width="500"/>
+
+<script>
+async function cargarImagen() {
+  const res = await fetch('/api/satelite');
+  const data = await res.json();
+  document.getElementById('img').src = data.url;
+}
+</script>
   </body>
 </html>
+
+
+  git config --global user.name "felipeabajo"
